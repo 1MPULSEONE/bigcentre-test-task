@@ -1,0 +1,82 @@
+// @layer components {
+//     .input, .textarea {
+//         @apply relative flex flex-col gap-y-1.5;
+
+//         > label {
+//             @apply text-16 text-secondary;
+//         }
+
+//         > div {
+//             @apply flex items-center gap-x-3.5 rounded-16 px-3.5 py-4;
+//         }
+
+//         > input,
+//         > textarea {
+//             @apply resize-none rounded-16;
+//         }
+
+//         > input,
+//         > textarea,
+//         > div > input,
+//         > div > textarea {
+//             @apply flex-1 resize-none bg-transparent px-0.5 text-primary outline-none placeholder:text-secondary;
+//         }
+
+//         &.admin > div,
+//         &.admin > input,
+//         &.admin > textarea {
+//             @apply bg-argent-700 p-4;
+//         }
+
+//         &.admin > div,
+//         &.admin > textarea {
+//             @apply bg-argent-700 p-4;
+//         }
+
+//         &.client > div,
+//         &.client > input,
+//         &.client > textarea {
+//             @apply bg-ink-700 p-4;
+//         }
+
+//         &[data-error]:not([data-error='false']) {
+//             > div,
+//             > input,
+//             > textarea {
+//                 @apply outline outline-[1.5px] outline-red;
+//             }
+
+//             > input,
+//             > textarea {
+//                 @apply -outline-offset-2;
+//             }
+
+//             &:after {
+//                 @apply text-14 text-red;
+//                 content: attr(data-error);
+//             }
+//         }
+
+//         &.admin {
+//             :autofill,
+//             :-webkit-autofill {
+//                 -webkit-background-clip: text;
+//                 -webkit-text-fill-color: rgb(var(--primary));
+//                 caret-color: rgb(var(--primary));
+//                 box-shadow: 0 0 0 2.5rem rgb(var(--argent-700)) inset;
+//                 transition: background-color 5000s ease-in-out 0s;
+//             }
+//         }
+
+//         &.client {
+//             :autofill,
+//             :-webkit-autofill {
+//                 -webkit-background-clip: text;
+//                 -webkit-text-fill-color: rgb(var(--primary));
+//                 caret-color: rgb(var(--primary));
+//                 box-shadow: 0 0 0 2.5rem rgb(var(--ink-700)) inset;
+//                 transition: background-color 5000s ease-in-out 0s;
+//             }
+//         }
+//     }
+// }

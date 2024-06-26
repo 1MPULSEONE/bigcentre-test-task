@@ -1,0 +1,24 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./theme.scss";
+@import "./components/input.scss";
+@import "./components/button.scss";
+
+@layer base {
+  html,
+  html[data-theme="light"] {
+    @include light;
+  }
+
+  html[data-theme="dark"] {
+    @include dark;
+  }
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    padding-top: 10px;
+  }
+}

@@ -1,0 +1,53 @@
+// @layer components {
+//     button.icon {
+//         @apply inline-flex items-center justify-center rounded-16 bg-argent-800 p-4 outline-none;
+//     }
+
+//     button:not(.icon) {
+//         @apply relative inline-flex items-center justify-center gap-x-2.5 rounded-16 px-6 py-3 outline-none motion-safe:transition-all motion-safe:duration-300;
+
+//         &:not(.outlined):not(.blank) {
+//             @apply bg-accent fill-primary text-primary;
+
+//             &:focus {
+//                 @apply ring-[3px] ring-accent/50;
+//             }
+
+//             &:disabled {
+//                 @apply opacity-50;
+//             }
+//         }
+
+//         &.outlined {
+//             @apply fill-accent text-accent outline outline-[1.5px] -outline-offset-2 outline-accent;
+
+//             &:focus {
+//                 @apply ring-[3px] ring-accent/50;
+//             }
+
+//             &:disabled {
+//                 @apply fill-secondary text-secondary outline-secondary;
+//             }
+//         }
+
+//         &.blank {
+//             @apply fill-secondary text-secondary outline-none focus:underline;
+//         }
+
+//         &[data-loading='true'] {
+//             @apply cursor-wait select-none fill-transparent text-transparent opacity-50 motion-reduce:cursor-default #{!important};
+
+//             &:before {
+//                 @apply absolute aspect-square h-full animate-fade-in bg-icon-loading bg-contain bg-no-repeat content-[''];
+
+//                 @media (prefers-reduced-motion) {
+//                     @apply inline-flex animate-none items-center bg-none text-primary content-['Загрузка...'];
+//                 }
+//             }
+//         }
+
+//         &:disabled {
+//             @apply cursor-not-allowed bg-opacity-50;
+//         }
+//     }
+// }
