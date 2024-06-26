@@ -188,6 +188,7 @@ const RefundGoodsPage: React.FC = () => {
                                     e.key.match(/[0-9]/) ||
                                     e.key === "Backspace"
                                   ) {
+                                    // @ts-ignore
                                     const value = e.target.value.replace(
                                       /\D/g,
                                       "",
@@ -196,6 +197,7 @@ const RefundGoodsPage: React.FC = () => {
                                       /(\d)(?=(\d{3})+(?!\d))/g,
                                       "$1 ",
                                     );
+                                    // @ts-ignore
                                     e.target.value = formattedValue;
                                   } else {
                                     e.preventDefault();
@@ -203,6 +205,7 @@ const RefundGoodsPage: React.FC = () => {
                                   4;
                                   // Ограничение до 12 символов с учетом пробелов
                                   if (
+                                    // @ts-ignore
                                     e.target.value.length >= 15 &&
                                     e.key.match(/[0-9]/)
                                   ) {
