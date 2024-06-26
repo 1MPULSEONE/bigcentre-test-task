@@ -1,0 +1,15 @@
+@mixin light {
+  --blue: 35 87 137;
+  --red: 237 28 36;
+  --grey: 217 217 217;
+  --cinder: 20 18 26;
+  --green: 79 211 101;
+  --orange: 255 184 0;
+
+  --primary: 20 20 20;
+  --secondary: 20 18 26;
+  --accent: 247 247 247;
+}
+
+@mixin dark {
+}
