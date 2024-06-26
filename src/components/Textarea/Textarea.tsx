@@ -14,7 +14,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
         {value ? (
           <span
             className={
-              "absoulute translate-y-1 pl-2  text-left text-[0.775rem] text-[#666666] "
+              "absoulute translate-y-2 pl-2  text-left text-[0.775rem] text-[#666666] "
             }
           >
             {placeholder}

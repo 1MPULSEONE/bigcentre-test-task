@@ -27,7 +27,7 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const FormSchema = z.object({
-  textInput1: z.string().min(12, {
+  textInput1: z.string().min(15, {
     message: "Номер договора состоит из 12 символов",
   }),
   textInput2: z.string().min(1, {
@@ -238,21 +238,21 @@ const RefundGoodsPage: React.FC = () => {
                                   onValueChange={field.onChange}
                                   defaultValue={field.value}
                                 >
-                                  <FormItem className="flex items-center  bg-accent py-4 pl-[10px] pr-[15px]">
+                                  <FormItem className="flex items-center bg-accent py-4 pl-[10px] pr-[15px] !text-12 sm:!text-14">
                                     <RadioGroupItem
                                       value="productDidntFit"
-                                      id="r2"
+                                      id="r1"
                                     />
                                     <label
                                       htmlFor="r1"
                                       className={
-                                        "!m-0 !ml-2.5 !p-0 pl-[10px] pr-[15px] text-left text-[#666666]"
+                                        "!m-0 !ml-2.5 !p-0 pl-[10px] pr-[15px] text-left !text-12 text-[#666666] sm:!text-14"
                                       }
                                     >
                                       Мне не подошел товар
                                     </label>
                                   </FormItem>
-                                  <FormItem className="flex items-center  bg-accent py-4 pl-[10px] pr-[15px]">
+                                  <FormItem className="flex items-center bg-accent py-4 pl-[10px] pr-[15px] !text-12 sm:!text-14">
                                     <RadioGroupItem
                                       value="visibleDamage"
                                       id="r2"
@@ -260,13 +260,13 @@ const RefundGoodsPage: React.FC = () => {
                                     <label
                                       htmlFor="r2"
                                       className={
-                                        "!m-0 !ml-2.5 !p-0 pl-[10px] pr-[15px] text-left text-[#666666]"
+                                        "!m-0 !ml-2.5 !p-0 pl-[10px] pr-[15px] text-left !text-12 text-[#666666] sm:!text-14"
                                       }
                                     >
                                       Есть видимые повреждения
                                     </label>
                                   </FormItem>
-                                  <FormItem className="-2 flex items-center bg-accent p-4 pl-[10px] pr-[15px]">
+                                  <FormItem className="-2 flex items-center bg-accent p-4 pl-[10px] pr-[15px] !text-14">
                                     <RadioGroupItem
                                       value="malfunction"
                                       id="r3"
@@ -379,13 +379,13 @@ const RefundGoodsPage: React.FC = () => {
                                 Товар целиком
                               </span>
                               <p className="hidden px-4 text-center text-xs text-gray-500 sm:block dark:text-gray-400">
-                                {file2 && file2.length > 0
-                                  ? file2.map((obj) => obj.name).join(", ")
+                                {file1 && file1.length > 0
+                                  ? file1.map((obj) => obj.name).join(", ")
                                   : "Выберите или перетащите файлы на устройстве"}
                               </p>
                               <p className=" px-4 text-xs text-gray-500 sm:hidden dark:text-gray-400 ">
-                                {file2 && file2.length > 0
-                                  ? file2.map((obj) => obj.name).join(", ")
+                                {file1 && file1.length > 0
+                                  ? file1.map((obj) => obj.name).join(", ")
                                   : "Выберите файлы на устройстве"}
                               </p>
                             </div>
