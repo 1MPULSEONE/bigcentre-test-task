@@ -408,7 +408,10 @@ const RefundGoodsPage: React.FC = () => {
                                 className={
                                   "z-10 cursor-pointer pb-1 text-12 font-semibold text-red"
                                 }
-                                onClick={() => setFile1(null)}
+                                onMouseDown={(e) => {
+                                  e.stopPropagation();
+                                  setFile1(null);
+                                }}
                               >
                                 Удалить файл
                               </label>
@@ -476,7 +479,10 @@ const RefundGoodsPage: React.FC = () => {
                                 className={
                                   "cursor-pointer pb-1 text-12 font-semibold text-red"
                                 }
-                                onClick={() => setFile2(null)}
+                                onMouseDown={(e) => {
+                                  e.stopPropagation();
+                                  setFile2(null);
+                                }}
                               >
                                 Удалить файл
                               </label>
